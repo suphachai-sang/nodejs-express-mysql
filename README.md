@@ -69,3 +69,62 @@ npm install
 ```
 node server.js
 ```
+
+### Call for Test by Postman
+```
+Get http://localhost:8080/api/tutorials
+Input
+Output
+[
+    {
+        "id": 1,
+        "title": "Node Js APIs",
+        "description": "this is testing",
+        "published": 0
+    },
+    {
+        "id": 2,
+        "title": "Go APIs",
+        "description": "this is testing",
+        "published": 0
+    },
+    {
+        "id": 3,
+        "title": "Vue Frontend",
+        "description": "this is testing",
+        "published": 0
+    },
+    {
+        "id": 4,
+        "title": "React Frontend",
+        "description": "this is testing",
+        "published": 0
+    },
+    {
+        "id": 5,
+        "title": "Angular Frontend",
+        "description": "this is testing",
+        "published": 0
+    },
+    {
+        "id": 6,
+        "title": "Java Backend",
+        "description": "this is testing",
+        "published": 0
+    }
+]
+
+Post http://localhost:8080/api/tutorials
+Input
+{
+    "title":"Java Backend",
+    "description":"this is testing"
+}
+Output
+{
+    "id": 6,
+    "title": "Java Backend",
+    "description": "this is testing",
+    "published": false
+}
+```
