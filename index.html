@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Time Counter</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    color: #fff;
+  }
+  #counter {
+    font-size: 36px;
+    margin-top: 50px;
+  }
+</style>
+</head>
+<body>
+<h1>Time Counter</h1>
+<div id="counter">00:00:00</div>
+
+<script>
+  function updateTime() {
+    const counterElement = document.getElementById('counter');
+    const currentTime = new Date();
+    const hours = String(currentTime.getHours()).padStart(2, '0');
+    const minutes = String(currentTime.getMinutes()).padStart(2, '0');
+    const seconds = String(currentTime.getSeconds()).padStart(2, '0');
+    const formattedTime = `${hours}:${minutes}:${seconds}`;
+    counterElement.textContent = formattedTime;
+  }
+
+  updateTime(); // Call the function initially to show the current time
+
+  // Update the time every second
+  setInterval(updateTime, 1000);
+</script>
+</body>
+</html>
